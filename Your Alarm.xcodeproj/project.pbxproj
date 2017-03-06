@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021B8F961E6D405400F4A260 /* TickingTimebombBB_ital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 021B8F941E6D3F9D00F4A260 /* TickingTimebombBB_ital.ttf */; };
+		021B8F971E6D405400F4A260 /* TickingTimebombBB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 021B8F951E6D3F9D00F4A260 /* TickingTimebombBB.ttf */; };
+		021B8F9C1E6D476F00F4A260 /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B8F9B1E6D476F00F4A260 /* ExtensionView.swift */; };
+		021B8F9E1E6D48D800F4A260 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B8F9D1E6D48D800F4A260 /* ExtensionUIColor.swift */; };
 		022B07C31E6C44CD004C7835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B07C21E6C44CD004C7835 /* AppDelegate.swift */; };
 		022B07C81E6C44CD004C7835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022B07C61E6C44CD004C7835 /* Main.storyboard */; };
 		022B07CA1E6C44CD004C7835 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022B07C91E6C44CD004C7835 /* Assets.xcassets */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021B8F941E6D3F9D00F4A260 /* TickingTimebombBB_ital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TickingTimebombBB_ital.ttf; sourceTree = "<group>"; };
+		021B8F951E6D3F9D00F4A260 /* TickingTimebombBB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TickingTimebombBB.ttf; sourceTree = "<group>"; };
+		021B8F9B1E6D476F00F4A260 /* ExtensionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		021B8F9D1E6D48D800F4A260 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		022B07BF1E6C44CD004C7835 /* Your Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Your Alarm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		022B07C21E6C44CD004C7835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		022B07C71E6C44CD004C7835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +50,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021B8F931E6D3F9100F4A260 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				021B8F941E6D3F9D00F4A260 /* TickingTimebombBB_ital.ttf */,
+				021B8F951E6D3F9D00F4A260 /* TickingTimebombBB.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
+		021B8F981E6D438500F4A260 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		021B8F991E6D439100F4A260 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				022B07C61E6C44CD004C7835 /* Main.storyboard */,
+				022B07CB1E6C44CD004C7835 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		021B8F9A1E6D439600F4A260 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				029AAC841E6C5EEF00F586BF /* ClockViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		022B07B61E6C44CD004C7835 = {
 			isa = PBXGroup;
 			children = (
@@ -63,13 +104,13 @@
 		022B07C11E6C44CD004C7835 /* Your Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				029AAC861E6C6EC900F586BF /* Utils */,
 				022B07C21E6C44CD004C7835 /* AppDelegate.swift */,
-				022B07C61E6C44CD004C7835 /* Main.storyboard */,
+				021B8F981E6D438500F4A260 /* Model */,
+				021B8F991E6D439100F4A260 /* View */,
+				021B8F9A1E6D439600F4A260 /* Controller */,
 				022B07C91E6C44CD004C7835 /* Assets.xcassets */,
-				022B07CB1E6C44CD004C7835 /* LaunchScreen.storyboard */,
 				022B07CE1E6C44CD004C7835 /* Info.plist */,
-				029AAC841E6C5EEF00F586BF /* ClockViewController.swift */,
+				029AAC861E6C6EC900F586BF /* Utils */,
 			);
 			path = "Your Alarm";
 			sourceTree = "<group>";
@@ -77,7 +118,10 @@
 		029AAC861E6C6EC900F586BF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				021B8F931E6D3F9100F4A260 /* Font */,
 				029AAC871E6C6EFF00F586BF /* ExtensionString.swift */,
+				021B8F9B1E6D476F00F4A260 /* ExtensionView.swift */,
+				021B8F9D1E6D48D800F4A260 /* ExtensionUIColor.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -162,6 +206,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021B8F961E6D405400F4A260 /* TickingTimebombBB_ital.ttf in Resources */,
+				021B8F971E6D405400F4A260 /* TickingTimebombBB.ttf in Resources */,
 				022B07CD1E6C44CD004C7835 /* LaunchScreen.storyboard in Resources */,
 				022B07CA1E6C44CD004C7835 /* Assets.xcassets in Resources */,
 				022B07C81E6C44CD004C7835 /* Main.storyboard in Resources */,
@@ -225,7 +271,9 @@
 			files = (
 				022B07C31E6C44CD004C7835 /* AppDelegate.swift in Sources */,
 				029AAC851E6C5EEF00F586BF /* ClockViewController.swift in Sources */,
+				021B8F9C1E6D476F00F4A260 /* ExtensionView.swift in Sources */,
 				029AAC881E6C6EFF00F586BF /* ExtensionString.swift in Sources */,
+				021B8F9E1E6D48D800F4A260 /* ExtensionUIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

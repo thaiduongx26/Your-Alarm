@@ -147,6 +147,7 @@ public class EZClockView: UIView {
     - parameter s: The second to set
     - parameter animated: Whether or not the change should be animated (default to false).
     */
+    
     public func setTime(h h: Int, m: Int, s: Int, animated: Bool = false) {
         hourProperty = h
         minuteProperty = m
@@ -162,10 +163,6 @@ public class EZClockView: UIView {
     */
     public func setTime(date: Date, animated: Bool = false) {
         var calendar = Calendar.current
-        print(calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date as Date))
-        let unitFlags = Set<Calendar.Component>([.hour, .year, .minute])
-        calendar.timeZone = TimeZone(identifier: "UTC")!
-        let components = calendar.dateComponents(unitFlags, from: date as Date)
         hourProperty = calendar.component(.hour, from: date)
         minuteProperty = calendar.component(.minute, from: date)
         secondProperty = calendar.component(.second, from: date)
@@ -173,9 +170,9 @@ public class EZClockView: UIView {
         updateHands(animated: animated)
     }
     
+    
     public override func layoutSubviews() {
         super.layoutSubviews()
-        
         let clockRadius = min(self.bounds.size.width, self.bounds.size.height)
         
         // Reset all transforms

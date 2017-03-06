@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,44 +24,143 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soa-2k-0hp" customClass="EZClockView" customModule="EZClockView">
-                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="41" y="60" width="293" height="293"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="soa-2k-0hp" secondAttribute="height" multiplier="1:1" id="Rjn-UA-9qA"/>
-                                    <constraint firstAttribute="width" constant="300" id="elG-Tb-sy4"/>
+                                    <constraint firstAttribute="width" secondItem="soa-2k-0hp" secondAttribute="height" multiplier="1:1" id="A53-jo-4Ym"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="faceBorderWidth">
-                                        <real key="value" value="6"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="minutesColor">
-                                        <color key="value" red="0.70980392160000005" green="0.70980392160000005" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="centerColor">
+                                        <color key="value" red="0.87865322828292847" green="0.41195446252822876" blue="0.43539950251579285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="centerBorderColor">
+                                        <color key="value" red="0.87865322828292847" green="0.41195446252822876" blue="0.43539950251579285" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="markingHourColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="markingMinuteColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondsColor">
+                                        <color key="value" red="0.42803037170000002" green="0.51468920709999999" blue="0.67248553040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="hoursColor">
+                                        <color key="value" red="0.7757037282" green="0.36920380590000001" blue="0.39777296779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hours">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minutes">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="seconds">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hoursLength">
+                                        <real key="value" value="0.67000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hoursThickness">
+                                        <real key="value" value="2.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minutesThickness">
+                                        <real key="value" value="2.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="secondsThickness">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="faceBackgroundColor">
+                                        <color key="value" red="0.010466828942298889" green="0.045321322977542877" blue="0.11590158194303513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="markingMinuteThickness">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="markingHourThickness">
+                                        <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb8-fb-lCW">
-                                <rect key="frame" x="16" y="493.5" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13:57:02AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb8-fb-lCW">
+                                <rect key="frame" x="16" y="383" width="343" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <color key="textColor" red="0.8784313725490196" green="0.41176470588235292" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26/6/1997" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mue-GO-dyI">
+                                <rect key="frame" x="16" y="453" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34n-Tv-Bo6">
+                                <rect key="frame" x="160" y="599.5" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="34n-Tv-Bo6" secondAttribute="height" multiplier="1:1" id="3cG-gA-n7Q"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zg-HS-VVU">
+                                <rect key="frame" x="160" y="599.5" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5zg-HS-VVU" secondAttribute="height" multiplier="1:1" id="ygp-hF-UAf"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aw0-B5-z7o">
+                                <rect key="frame" x="158" y="597" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Aw0-B5-z7o" secondAttribute="height" multiplier="1:1" id="Llc-9Q-DKI"/>
+                                    <constraint firstAttribute="width" constant="60" id="fge-iL-RPd"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
+                                <connections>
+                                    <action selector="showListButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODk-FL-V0w"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.010567194782197475" green="0.041205324232578278" blue="0.11595604568719864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="soa-2k-0hp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9MU-qg-3fG"/>
-                            <constraint firstItem="mb8-fb-lCW" firstAttribute="top" secondItem="soa-2k-0hp" secondAttribute="bottom" constant="10" id="BsL-Jw-egI"/>
-                            <constraint firstItem="mb8-fb-lCW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EKC-Mg-LN4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mb8-fb-lCW" secondAttribute="trailing" id="OGZ-2G-DcC"/>
-                            <constraint firstItem="soa-2k-0hp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X8A-xY-fB3"/>
+                            <constraint firstItem="mb8-fb-lCW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1fX-xq-r4c"/>
+                            <constraint firstItem="5zg-HS-VVU" firstAttribute="centerY" secondItem="Aw0-B5-z7o" secondAttribute="centerY" id="39y-3M-3MM"/>
+                            <constraint firstItem="5zg-HS-VVU" firstAttribute="centerX" secondItem="Aw0-B5-z7o" secondAttribute="centerX" id="CE2-SQ-N41"/>
+                            <constraint firstItem="mb8-fb-lCW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CYH-h7-K5y"/>
+                            <constraint firstItem="mue-GO-dyI" firstAttribute="top" secondItem="mb8-fb-lCW" secondAttribute="bottom" constant="10" id="DRy-yL-7Fa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aw0-B5-z7o" secondAttribute="bottom" constant="10" id="LwB-my-gWh"/>
+                            <constraint firstItem="34n-Tv-Bo6" firstAttribute="centerX" secondItem="Aw0-B5-z7o" secondAttribute="centerX" id="OZg-jp-Vl1"/>
+                            <constraint firstItem="soa-2k-0hp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RbI-rY-Gas"/>
+                            <constraint firstItem="34n-Tv-Bo6" firstAttribute="width" secondItem="Aw0-B5-z7o" secondAttribute="width" constant="-5" id="S8p-3v-SFg"/>
+                            <constraint firstItem="mb8-fb-lCW" firstAttribute="top" secondItem="soa-2k-0hp" secondAttribute="bottom" constant="30" id="VrA-ek-MBu"/>
+                            <constraint firstItem="Aw0-B5-z7o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WCJ-wC-s53"/>
+                            <constraint firstItem="5zg-HS-VVU" firstAttribute="width" secondItem="Aw0-B5-z7o" secondAttribute="width" constant="-5" id="e3S-Ps-JIU"/>
+                            <constraint firstItem="soa-2k-0hp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="eAB-dm-7C9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mue-GO-dyI" secondAttribute="trailing" id="eaL-r4-3F4"/>
+                            <constraint firstItem="mue-GO-dyI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ih3-ZL-hei"/>
+                            <constraint firstItem="34n-Tv-Bo6" firstAttribute="centerY" secondItem="Aw0-B5-z7o" secondAttribute="centerY" id="k3s-31-rwI"/>
+                            <constraint firstItem="Aw0-B5-z7o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mf3-8C-QWk"/>
+                            <constraint firstItem="soa-2k-0hp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ycG-ms-nXs"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WCJ-wC-s53"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="alarmButton" destination="5zg-HS-VVU" id="Gl6-LX-OvZ"/>
                         <outlet property="clockLabel" destination="mb8-fb-lCW" id="1lz-Ya-Yrq"/>
                         <outlet property="clockView" destination="soa-2k-0hp" id="cxU-C1-D36"/>
+                        <outlet property="listHistoryButton" destination="34n-Tv-Bo6" id="H5c-iI-vKF"/>
+                        <outlet property="showListButton" destination="Aw0-B5-z7o" id="6HD-Jq-i7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="37" height="25"/>
+    </resources>
 </document>

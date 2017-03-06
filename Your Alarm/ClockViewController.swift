@@ -14,23 +14,43 @@ class ClockViewController: UIViewController {
     @IBOutlet weak var clockView: EZClockView!
     @IBOutlet weak var clockLabel: UILabel!
     
+    @IBOutlet weak var showListButton: UIButton!
+    @IBOutlet weak var alarmButton: UIButton!
+    @IBOutlet weak var listHistoryButton: UIButton!
+    
+    private var countForShowListbutton : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ClockViewController.update), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.clockView = EZClockView(frame: view.bounds)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+        
         update()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.setupButtonForTest()
+        self.showListButton.center = CGPoint(x: 100, y: 200)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
+    
+    
+    
     func update(){
         let date = Date()
         let calendar = Calendar.current
+//        print(calendar.component(., from: date))
         let hourProperty = calendar.component(.hour, from: date)
         let minuteProperty = calendar.component(.minute, from: date)
         let secondProperty = calendar.component(.second, from: date)
@@ -38,17 +58,43 @@ class ClockViewController: UIViewController {
         clockView.hours = hourProperty
         clockView.seconds = secondProperty
         clockView.minutes = minuteProperty
-        self.clockLabel.text = String.convertToTimer(time: hourProperty) + ":" + String.convertToTimer(time: minuteProperty) + ":" + String.convertToTimer(time: secondProperty)
+        self.clockLabel.text = String.convertToTimer(time: hourProperty) + ":" + String.convertToTimer(time: minuteProperty)
+        
+//        if hourProperty < 12 {
+//            self.clockLabel.text = self.clockLabel.text! + "AM"
+//        } else {
+//            self.clockLabel.text = self.clockLabel.text! + "PM"
+//        }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupButtonForTest(){
+        self.showListButton.backgroundColor = UIColor(hex:"E0696F")
+        self.alarmButton.backgroundColor = UIColor.green
+        self.listHistoryButton.backgroundColor = UIColor.green
+        self.showListButton.makeViewCircle()
+        self.alarmButton.makeViewCircle()
+        self.listHistoryButton.makeViewCircle()
     }
-    */
 
+    @IBAction func showListButtonDidTap(_ sender: UIButton) {
+        if countForShowListbutton == 0 {
+            UIView.animate(withDuration: 0.5, animations: { 
+                //self.showListButton.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI / 4))
+                self.showListButton.center = CGPoint(x: 100,y: 300)
+//                UIView.animate(withDuration: 0.5, animations: { 
+//                    self.alarmButton.center = CGPoint(x: sender.center.x - 50, y: sender.center.y - 50)
+//                })
+//                self.listHistoryButton.center = CGPoint(x: sender.center.x + 50 , y : sender.center.y - 50)
+            }, completion: { (true) in
+                self.countForShowListbutton = 1
+            })
+        } else {
+            UIView.animate(withDuration: 0.5, animations: { 
+                self.showListButton.transform = CGAffineTransform(rotationAngle: CGFloat(0))
+            }, completion: { (true) in
+                self.countForShowListbutton = 0
+            })
+        }
+        
+    }
 }
